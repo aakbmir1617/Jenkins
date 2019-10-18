@@ -26,7 +26,7 @@ pipeline {
         stage ('Build') {
             steps {
     		   echo 'Building in progress'
-    		   bat 'mvn package'
+    		   bat 'mvn package -DskipTests'
     	    }
    		}
    		stage ('Deploy') {
