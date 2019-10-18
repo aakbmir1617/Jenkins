@@ -8,22 +8,25 @@ pipeline {
 	    stage ('Initialize') {
             steps {
                  echo 'Initialize'
-                 bat 'mvn install'
+                 
             }
         }
 		stage ('Clean') {
 		    steps {
-			   echo 'Clean'
+			   echo 'Cleaning in progress'
+			   bat 'mvn clean'
 		    }
 		}
 		stage ('Test') {
             steps {
-        	   echo 'Test'
+        	   echo 'Testing in progress'
+        	   bat 'mvn Test'
             }
         }
         stage ('Build') {
             steps {
-    		   echo 'Build'
+    		   echo 'Building in progress'
+    		   bat 'mvn package'
     	    }
    		}
    		stage ('Deploy') {
