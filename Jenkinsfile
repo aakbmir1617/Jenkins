@@ -8,7 +8,7 @@ pipeline {
 	    stage ('Initialize') {
             steps {
                  echo 'Initialize'
-                 
+
             }
         }
 		stage ('Clean') {
@@ -20,7 +20,7 @@ pipeline {
 		stage ('Test') {
             steps {
         	   echo 'Testing in progress'
-        	   bat 'mvn Test'
+        	   bat 'mvn test'
             }
         }
         stage ('Build') {
