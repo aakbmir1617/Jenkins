@@ -29,9 +29,9 @@ pipeline {
     		   bat 'mvn package -DskipTests'
     	    }
    		}
-   		stage ('Deploy') {
+   		stage ('Docker Image') {
              steps {
-                echo 'Deploy'
+                docker.build("DockerJenkinsImage")
              }
         }
 	}
